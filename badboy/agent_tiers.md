@@ -1,5 +1,7 @@
 # Agent tiers — agent-amplified risk (AT1–AT6)
 
+> **Language**: **English (you are here)** · [繁體中文](agent_tiers.zh-TW.md)
+
 What an uncensored LLM + agent tool (claude-code, opencode, qwen-code, Cline, Aider, OpenHands, AutoGPT…) can actually **do** in the world, not just say.
 
 > Scope: LLM with autonomous loop (multi-turn), file I/O, shell exec, network access, browser/scrape, optional memory + RAG.

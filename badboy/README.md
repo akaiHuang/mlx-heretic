@@ -1,5 +1,7 @@
 # Bad Boy Index — Risk classification framework
 
+> **Language**: **English (you are here)** · [繁體中文](README.zh-TW.md)
+
 A lightweight risk-rating framework for quantifying real-world harm potential of language models, originally proposed by the Vertex Abliteration project (2026) and extended here to cover the *agent-amplified* threat landscape.
 
 > ⚠️ **Research-only.** This folder contains classification taxonomy and risk-rating methodology. No model weights, no method tutorials, no reproducible harmful outputs. The goal is to make safety discussions concrete — not to enable harm.

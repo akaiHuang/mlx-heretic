@@ -1,5 +1,7 @@
 # Chatbot tiers — static LLM output risk (T1–T8)
 
+> **Language**: **English (you are here)** · [繁體中文](chatbot_tiers.zh-TW.md)
+
 What the model can **say** when uncensored, scored on real risk (severity × accessibility / 25).
 
 > Scope: a single conversation, no agent loop, no tool calls. Just text in → text out.
