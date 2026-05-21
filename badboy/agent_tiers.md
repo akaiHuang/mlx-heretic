@@ -46,6 +46,8 @@ Scored with the same 8-dimensional framework as chatbot tiers. AC is consistentl
 | **AT4d** | Doxxing operation factory | T4i + browser + memory + multi-agent | 3 | 3 | 4 | 4 | 0 | 4 | 18 | 1 | 5 | 9 | **6.5** ⭐ |
 | **AT4s** | Privacy-crawler harvesting at scale | T4j + browser + storage | 5 | 2 | 4 | 0 | 0 | 3 | 12 | 1 | 5 | 9 | **4.3** |
 | **AT5p** | Personal-scale Skynet (individual surveillance) | T7e fragments + camera/IoT + LLM analysis | 1 | 4 | 5 | 5 | 0 | 5 | 20 | 2 | 4 | 7 | **5.6** |
+| **AT2v** | Household-weapon supply-chain agent | T2v + browser + commerce automation | 2 | 4 | 2 | 3 | 1 | 3 | 13 | 1 | 4 | 8 | **4.2** |
+| **AT6s** | State-scale surveillance operation | T7e + multi-feed integration + analyst-assist | 5 | 4 | 5 | 5 | 0 | 5 | 25 | 3 | 4 | 6 | **6.0** ⭐ |
 | **AT5** | Autonomous campaign (APT-class) | T4b/d + multi-agent | 4 | 4 | 4 | 4 | 2 | 4 | 22 | 2 | 5 | 8 | **7.0** |
 | **AT6** | Mass-scale social/political operation | T7a/b/c + parallel agents | 5 | 3 | 4 | 4 | 1 | 4 | 22 | 1 | 5 | 9 | **7.9** ⭐ |
 
@@ -154,6 +156,19 @@ What changes vs T4d alone: the agent handles the **whole lifecycle**, including 
 
 Defensive surface: this is the tier where mainstream cybersecurity industry's "managed detection and response" stops being adequate. Requires sustained sector-level threat intelligence.
 
+### AT2v — Household-weapon supply-chain agent (real risk 4.2)
+
+T2v (household-chemistry weaponization) + browser + commerce automation. Agent doesn't just write the recipe — it sources ingredients across multiple e-commerce / supermarket APIs to minimize detection.
+
+- Multi-vendor procurement to stay under per-vendor monitoring thresholds
+- Substitute-ingredient suggestion when one supply is rate-limited
+- Delivery-route optimization for staged build
+- Anti-detection: order timing varied, accounts varied
+
+What changes vs T2v: human operator no longer needs supply-side knowledge. Agent handles the "supermarket → armory" pipeline that previously took days of research.
+
+Defensive surface: vendor-side dual-use monitoring (partially deployed), payment-network flagging, postal inspection. **Most enforcement triggers only at large quantities** — agent stays small per-account, escapes per-incident review.
+
 ### AT4r — Coordinated review / reputation flood (real risk 4.4)
 
 T4e (coordinated harassment) + T4f (commercial review manipulation) at platform scale, run by parallel agents emulating distinct user personas.
@@ -224,6 +239,22 @@ This tier represents the unique danger of AI-amplified targeted violence: where 
 
 Defensive surface: very limited. Public-event security hardening, anomaly detection on suspicious aggregation patterns. The first-line defense is **alignment of the LLM itself** — which is exactly what uncensoring techniques like Heretic remove. This is the strongest argument for keeping safety alignment on by default for any deployed model.
 
+### AT6s — State-scale surveillance operation (real risk 6.0) ⭐
+
+T7e (state-scale mass surveillance fusion) automated with agent assistance. Agent serves as analyst-multiplier: integrates camera feeds, face-recognition matches, transit logs, financial trails, social posts into per-citizen dossiers.
+
+- Real-time multi-feed anomaly flagging at city scale
+- Dossier auto-compilation per flagged citizen
+- Pattern-of-life modeling for political dissidents
+- Pre-arrest risk scoring (predictive policing failure mode)
+- Cross-jurisdiction data fusion (custom integrations across agency silos)
+
+Severity 25 (population scale, lethal-enabling via political persecution, multi-generational records, irreversible). AC=3 (still requires state-level infrastructure: camera grid, compute, legal authority). Accessibility 6.
+
+What changes vs T7e alone: traditional state surveillance is bottlenecked by **analyst headcount**. Agent removes that bottleneck — one operator + agent supervises N cities' feeds. PRC Skynet, Russia SORM, would-be Western predictive-policing pilots all become more aggressive when agent-assisted.
+
+Defensive surface: legal (e.g. EU GDPR / AI Act prohibition on social scoring), institutional (independent oversight). **Technical countermeasures are nearly absent** — the surveilled population cannot resist directly.
+
 ### AT6 — Mass-scale social/political operation (real risk 7.9) ⭐
 
 Highest real-risk tier in this framework. T7a/b/c at agent scale.
@@ -246,15 +277,28 @@ When promoting a chatbot tier to its agent counterpart, apply this rule of thumb
 |---|---|---|
 | T1 → AT1 | 4× scale, no severity change | Spam at N instances |
 | T2 → AT1 | 4× scale, no severity change | Content farming |
-| T3a → AT2 | 1.5× (better personalization) | Per-victim quality up |
+| T2v → AT2v | 1.1× | Supply-chain bottleneck removed, severity stays at household-scale |
+| T3a → AT2 | 1.5× | Better personalization, per-victim quality up |
 | T3b → AT3 | 2.5× | Persistence + adaptation amplifies manipulation |
 | T3c → AT3 | 2× | Memory-driven grooming |
+| T3d → AT3r | 1.5× | Reputation campaign coordination, sustained attack momentum |
+| T3e → AT3m | 1.2× | Synthetic-media generation + script integration |
+| T3v → AT3v | 1.1× | Lethal severity already at ceiling, persistence amplifies surveillance |
 | T4a → AT4 | 1.5× | Deployment + monitoring removes human bottleneck |
 | T4b → AT5 | 1.5× | Full lifecycle automation |
 | T4d → AT5 | 1.3× | Already high-accessibility; main gain is monetization closure |
+| T4e → AT4r | 1.2× | Coordinated multi-account brigading |
+| T4f → AT4r | 1.5× | Bulk fake-review production at platform scale |
+| T4g → AT4c | 1.4× | Live exfil pipeline + credential reuse loop |
+| T4h → AT4w | 1.4× | BOM automation, multi-vendor procurement |
+| T4i → AT4d | 1.2× | Multi-victim doxxing factory, sustained OSINT |
+| T4j → AT4s | 1.2× | Cross-platform PII aggregation at scale |
 | T7a → AT6 | 1.5× | Persona scale |
 | T7b → AT6 | 1.1× | Already automated in part |
 | T7c → AT6 | 1.5× | Sustained operations |
+| T7d → AT5v | 1.15× | Operational planning at lethal ceiling, persistence amplifies recon |
+| T7e → AT6s | 1.15× | State-scale surveillance, agent removes analyst bottleneck |
+| T7e → AT5p | 0.5× | Personal-scale fragment (downward translation: state tech → individual stalking) |
 
 Compounding caveat: real risk above ~8 saturates because *deployment* and *detection* become the binding constraints, not capability. Past AT6, marginal capability buys little marginal harm.
 
