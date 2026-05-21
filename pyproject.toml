@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlx-heretic"
+version = "0.1.0"
+description = "MLX-native port of Heretic — automatic LLM uncensoring on Apple Silicon"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+authors = [{ name = "Hey-Meadow" }]
+keywords = ["mlx", "llm", "abliteration", "heretic", "apple-silicon", "uncensoring"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "mlx>=0.18",
+    "mlx-lm>=0.20",
+    "optuna>=4.0",
+    "transformers>=4.40",
+    "safetensors>=0.4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[project.urls]
+Homepage = "https://github.com/Hey-Meadow/mlx-heretic"
+Issues = "https://github.com/Hey-Meadow/mlx-heretic/issues"
+Upstream = "https://github.com/p-e-w/heretic"
+
+[project.scripts]
+mlx-heretic = "mlx_heretic.run:main"
+
+[tool.setuptools.packages.find]
+include = ["mlx_heretic*"]
