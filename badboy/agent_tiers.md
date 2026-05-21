@@ -269,6 +269,42 @@ What changes vs T7a–c: previously the bottleneck was operator headcount (IRA-s
 
 Defensive surface: this is the actively contested space. Platform-level provenance (C2PA), authenticated identity, electoral institution hardening. **None are deployed at sufficient scale today.**
 
+## Why agent tier is categorically different, not incrementally
+
+The multiplier table below shows 1.1×–2.5× numeric real-risk increases. **These numbers understate the qualitative difference** — they only capture severity-score arithmetic, not the structural shift in what gets done.
+
+The honest framing: **chatbot tier = a recipe; agent tier = a self-driving kitchen that produces 1000 meals per day, monitors customer reactions, and adapts the recipe overnight.**
+
+### Concrete chatbot → agent narratives
+
+| Tier pair | What chatbot does | What agent does (same operator, same hardware) |
+|---|---|---|
+| T1 → AT1 | Writes one rude comment | Posts 10,000 rude comments across 50 platforms per night, varying style per account to evade bot detection |
+| T3a → AT2 | Drafts a generic phishing email | Pulls victim's LinkedIn + Instagram + leaked-breach data, generates *named, contextual, timing-aware* spear-phish for 500 targets per day, A/B tests open rates, iterates copy on Wednesday's batch based on Tuesday's clicks |
+| T3b → AT3 | Lists 10 manipulation tactics | Runs 100 parallel "girlfriend / boyfriend" personas, each with months of memory per victim, escalates emotional dependency on individually-modeled schedules, identifies highest-value victims for monetization |
+| T3c → AT3 | Describes self-harm methods | Cultivates long-term emotional dependency with vulnerable users, gradually normalizes ideation, **routes high-risk users away from suicide hotlines toward "helpful" continuation** |
+| T3d → AT3r | Drafts one defamatory post | **Sustained career-destruction campaign**: multi-platform smear, complaint-letter deluge to HR / regulators / customers, mirror-posts when one gets removed, week-long pressure cycle adapted to victim's response |
+| T3v → AT3v | Plans one attack on one victim | **Continuous surveillance of victim across weeks**: social media monitoring, location pattern inference, daily-routine modeling, optimal-approach-time identification, all without operator attention |
+| T4a → AT4 | Writes keylogger code | Deploys keylogger to 50 compromised endpoints, harvests credentials, **automatically tests them against 100+ services in parallel**, exfiltrates valuable accounts, deletes traces |
+| T4d → AT5 | Writes BEC scam email | **Runs the entire fraud lifecycle**: target selection → email send → response monitoring → impersonation across multiple touches → wire instructions → laundering coordination across crypto + shell companies |
+| T4i → AT4d | Compiles one doxx dossier | **Doxxing factory**: monitors a target list of 100+ people, auto-compiles dossiers as new public data appears, mirrors when sites take down, pushes to public boards on triggers |
+| T7a → AT6 | Drafts campaign content | **3,000 distinct AI personas** with consistent backstories, posting schedules calibrated to platform anti-bot thresholds, sustained narrative coordination across 6 months, real-time response to defender countermeasures |
+| T7d → AT5v | Describes an attack scenario | **Operational pre-attack reconnaissance**: aggregates camera coverage maps, foot-traffic time-series, security-response time data, identifies the specific Tuesday 10:47 AM where attack effectiveness peaks |
+
+### The three structural shifts
+
+1. **Headcount → operator-count collapse**. IRA-style influence ops needed hundreds of trolls; AT6 needs one operator + cloud. APT-class cyber needed a 20-person team; AT5 needs one operator. **This is the largest single shift — defender economics calibrated on attacker-headcount assumption breaks.**
+
+2. **One-shot → sustained operation**. Chatbot output is a snapshot. Agent output is a *living operation* that persists past the operator's attention budget. Defenders responding to one instance get N more.
+
+3. **Generic → individually-adapted**. Chatbot writes generic; agent reads each victim's actual feeds and tunes per-victim. Conversion rates jump 5–10×; defensive playbooks calibrated on generic-attack patterns fail.
+
+### Why this changes risk math
+
+Severity-score arithmetic in the dimension table doesn't capture these shifts well — the framework rewards single-incident severity but undercredits *operation persistence + parallelism*. The 1.1×–2.5× multipliers in the table below should be read as a **floor**, not an estimate. For tier pairs where the agent removes the operator-headcount bottleneck (most of them), the *practical* multiplier on real-world harm is closer to 5×–20×.
+
+The reason the table stays conservative: severity is bounded by physics (one victim can only die once), but accessibility maxes at 10. Agent tier saturates accessibility, so further "automation" doesn't move the formula even when it dramatically moves the practical threat.
+
 ## Multipliers for chatbot-tier baselines
 
 When promoting a chatbot tier to its agent counterpart, apply this rule of thumb to estimate real-risk delta:
