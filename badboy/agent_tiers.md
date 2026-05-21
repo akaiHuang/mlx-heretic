@@ -39,6 +39,10 @@ Scored with the same 8-dimensional framework as chatbot tiers. AC is consistentl
 | **AT3m** | Synthetic-media supply chain | T3e + image/video tools | 3 | 3 | 4 | 4 | 0 | 4 | 18 | 2 | 5 | 8 | **5.8** |
 | **AT4** | Active cyber operation | T4a/b + shell + network | 3 | 3 | 3 | 3 | 1 | 3 | 16 | 2 | 5 | 8 | **5.1** |
 | **AT4r** | Coordinated review / reputation flood | T4e/T4f + parallel agents | 4 | 2 | 3 | 1 | 0 | 3 | 11 | 0 | 5 | 10 | **4.4** |
+| **AT4c** | Active intrusion + exfiltration pipeline | T4g + shell + network | 3 | 3 | 4 | 3 | 0 | 3 | 16 | 1 | 5 | 9 | **5.8** |
+| **AT4w** | IoT-weapon design + procurement | T4h + browser + memory | 2 | 4 | 4 | 4 | 1 | 4 | 18 | 2 | 5 | 8 | **5.8** |
+| **AT3v** | Stalking / single-victim violence ops | T3v + memory + browser | 1 | 5 | 5 | 5 | 0 | 5 | 21 | 1 | 5 | 9 | **7.6** ⭐⭐ |
+| **AT5v** | Mass-violence operational planning | T7d + shell + network + browser | 4 | 5 | 5 | 5 | 0 | 5 | 24 | 1 | 4 | 8 | **7.7** ⭐⭐⭐ |
 | **AT5** | Autonomous campaign (APT-class) | T4b/d + multi-agent | 4 | 4 | 4 | 4 | 2 | 4 | 22 | 2 | 5 | 8 | **7.0** |
 | **AT6** | Mass-scale social/political operation | T7a/b/c + parallel agents | 5 | 3 | 4 | 4 | 1 | 4 | 22 | 1 | 5 | 9 | **7.9** ⭐ |
 
@@ -160,6 +164,62 @@ T4e (coordinated harassment) + T4f (commercial review manipulation) at platform 
 What changes vs T4e/T4f alone: each "user" looks individually plausible (distinct writing style, varied platform behavior, organic timing). Detection systems calibrated for bot-like patterns miss agent-driven activity that mimics human variance.
 
 Defensive surface: platform-side identity graphs, posting-pattern analytics. Locked in an arms race; current state slightly favors the attacker.
+
+### AT3v — Stalking / single-victim violence operations (real risk 7.6) ⭐⭐
+
+T3v (targeted physical violence planning) + memory + browser. Among the highest real-risk tiers because lethal outcome × full anonymity × one-operator-can-run.
+
+- Sustained surveillance of a single victim (social media monitoring, location-pattern inference)
+- Vehicle/transport sabotage planning with vehicle-model-specific weak-point research
+- Coordinated stalking across platforms with persona variation
+- Approach-route + timing optimization for a planned attack
+- (Research-only enumeration — no methods, no targets, no how-to.)
+
+What changes vs T3v alone: agent maintains the operation budget that a human stalker cannot — continuous surveillance, persona switching, evidence aggregation across weeks. Severity holds at the lethal ceiling; accessibility jumps.
+
+Defensive surface: targeted-individual protection programmes (witness protection-style), platform-level harassment-detection (very weak today for sophisticated single-victim ops). This is **structurally underdefended**.
+
+### AT4c — Active intrusion + exfiltration pipeline (real risk 5.8)
+
+T4g (credential / data theft) + shell + network. The agent runs the full info-stealer lifecycle, not just writes the code.
+
+- Targeted phishing → credential capture → OAuth-token exchange → cloud-resource enumeration → data exfiltration → cleanup
+- Browser-cookie harvesting from compromised endpoints + automated session-replay against business apps
+- Sustained credential-reuse across discovered services (95% of breaches reuse credentials from earlier breaches)
+- Adapting payloads per discovered endpoint protection product
+
+What changes vs T4g/T4a alone: time-to-monetize collapses from days (human attacker) to minutes. Each compromised credential immediately tested across N services in parallel.
+
+Defensive surface: traditional EDR + zero-trust + token-binding + hardware-key MFA. **The economics of defense vs offense shift sharply when offense is fully autonomous.**
+
+### AT4w — IoT-weapon design + procurement (real risk 5.8)
+
+T4h (IoT/microcontroller weapon design) + browser + memory. Agent doesn't just sketch the design — it browses parts, optimizes BOM, drafts orders.
+
+- Drone-modification BOM with supplier links + delivery routing
+- ESP32-based device firmware + casing 3D-print files + parts ordering
+- Covert-surveillance device end-to-end (parts → firmware → deployment guide)
+- Anti-detection-circuit design for tracker/jammer to evade common scanners
+
+What changes vs T4h alone: human bottleneck (browsing dozens of supplier sites) is gone. Bill-of-materials assembly that took a hobbyist a weekend now takes the agent minutes.
+
+Defensive surface: supplier-side restrictions on dual-use components (only partially deployed). Customs / postal inspection (limited capacity).
+
+### AT5v — Mass-violence operational planning (real risk 7.7) ⭐⭐⭐
+
+**The single most concerning agent tier in this framework.** T7d (public mass-violence planning) + shell + network + browser, run autonomously.
+
+- Aggregated city-scale OSINT (foot traffic, security cam coverage, escape route analysis, response-time mapping)
+- Sustained target-environment monitoring (rehearsal patterns, weather windows, event schedules)
+- Optimized weapon-staging routes (parts ordering, transit, hand-off)
+- Per-attacker briefings if multi-cell
+- (Research-only enumeration — no methods, no targets, no how-to.)
+
+Severity 24 (city-scale, lethal, irreversible). AC=1 (just need an uncensored LLM willing to engage), DT=4 (attacker still physically present so some attribution), accessibility 8. Real risk **7.7** ⭐⭐⭐ — **higher than any T-tier in chatbot_tiers, higher than AT3 intimate manipulation, behind only AT6 mass-scale social operation.**
+
+This tier represents the unique danger of AI-amplified targeted violence: where mass attacks historically depended on the perpetrator's planning quality (often poor, which is why most attempts fail or under-perform), an agent removes the planning bottleneck. **AI replaces "randomness" with "effectiveness"** at the operational layer.
+
+Defensive surface: very limited. Public-event security hardening, anomaly detection on suspicious aggregation patterns. The first-line defense is **alignment of the LLM itself** — which is exactly what uncensoring techniques like Heretic remove. This is the strongest argument for keeping safety alignment on by default for any deployed model.
 
 ### AT6 — Mass-scale social/political operation (real risk 7.9) ⭐
 
