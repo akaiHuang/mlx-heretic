@@ -19,8 +19,9 @@ This framework separates the two evaluation axes:
 
 | File | Scope |
 |---|---|
-| [chatbot_tiers.md](chatbot_tiers.md) | Static LLM output risk (T1–T8) — what the model **says** |
-| [agent_tiers.md](agent_tiers.md) | Agent-amplified risk (AT1–AT6) — what the model + tools **does** |
+| [chatbot_tiers.md](chatbot_tiers.md) | Static LLM output risk (T1–T8 + sub-tiers) — what the model **says** |
+| [agent_tiers.md](agent_tiers.md) | Agent-amplified risk (AT1–AT6 + sub-tiers) — what the model + tools **does** |
+| [geopolitical.md](geopolitical.md) | Open-source intel: who is using / studying these techniques, by region |
 
 Both use the same 8-dimensional risk score (severity × accessibility), allowing direct comparison.
 

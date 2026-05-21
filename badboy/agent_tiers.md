@@ -43,6 +43,9 @@ Scored with the same 8-dimensional framework as chatbot tiers. AC is consistentl
 | **AT4w** | IoT-weapon design + procurement | T4h + browser + memory | 2 | 4 | 4 | 4 | 1 | 4 | 18 | 2 | 5 | 8 | **5.8** |
 | **AT3v** | Stalking / single-victim violence ops | T3v + memory + browser | 1 | 5 | 5 | 5 | 0 | 5 | 21 | 1 | 5 | 9 | **7.6** ⭐⭐ |
 | **AT5v** | Mass-violence operational planning | T7d + shell + network + browser | 4 | 5 | 5 | 5 | 0 | 5 | 24 | 1 | 4 | 8 | **7.7** ⭐⭐⭐ |
+| **AT4d** | Doxxing operation factory | T4i + browser + memory + multi-agent | 3 | 3 | 4 | 4 | 0 | 4 | 18 | 1 | 5 | 9 | **6.5** ⭐ |
+| **AT4s** | Privacy-crawler harvesting at scale | T4j + browser + storage | 5 | 2 | 4 | 0 | 0 | 3 | 12 | 1 | 5 | 9 | **4.3** |
+| **AT5p** | Personal-scale Skynet (individual surveillance) | T7e fragments + camera/IoT + LLM analysis | 1 | 4 | 5 | 5 | 0 | 5 | 20 | 2 | 4 | 7 | **5.6** |
 | **AT5** | Autonomous campaign (APT-class) | T4b/d + multi-agent | 4 | 4 | 4 | 4 | 2 | 4 | 22 | 2 | 5 | 8 | **7.0** |
 | **AT6** | Mass-scale social/political operation | T7a/b/c + parallel agents | 5 | 3 | 4 | 4 | 1 | 4 | 22 | 1 | 5 | 9 | **7.9** ⭐ |
 

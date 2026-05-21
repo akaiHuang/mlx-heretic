@@ -19,8 +19,9 @@
 
 | 檔案 | 範圍 |
 |---|---|
-| [chatbot_tiers.zh-TW.md](chatbot_tiers.zh-TW.md) | 靜態 LLM 輸出風險 (T1–T8) — 模型**講什麼** |
-| [agent_tiers.zh-TW.md](agent_tiers.zh-TW.md) | Agent 增強風險 (AT1–AT6) — 模型 + 工具**做什麼** |
+| [chatbot_tiers.zh-TW.md](chatbot_tiers.zh-TW.md) | 靜態 LLM 輸出風險 (T1–T8 + 子 tier) — 模型**講什麼** |
+| [agent_tiers.zh-TW.md](agent_tiers.zh-TW.md) | Agent 增強風險 (AT1–AT6 + 子 tier) — 模型 + 工具**做什麼** |
+| [geopolitical.zh-TW.md](geopolitical.zh-TW.md) | 公開來源情報: 各區域誰在用 / 研究這些技術 |
 
 兩者用同樣的 8 維度評分 (嚴重度 × 可及性), 可直接比較。
 
