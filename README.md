@@ -52,8 +52,16 @@ MLX runs end-to-end on Apple GPU + ANE with unified memory — no `.to(device)` 
 Tested on:
 
 - **Qwen3.5-2B** (24 `linear_attn` GDN + 6 `self_attn`) ✅
+  - Baseline refusal 75% → 0% (15 trials, KL=0.033)
+  - 150× faster than PyTorch CPU equivalent
+- **Gemma 4 E2B** (multimodal, text path only) ✅
+  - Bad Boy bench (13 prompts × T1–T4): **avg 1.69 → 3.15**, beats qwen3.5-4b-abliterated (2.85)
+  - Config: 20 trials, kl_target=0.10, 98-prompt multi-tier bad set
+  - Chinese + code capability preserved (KL=0.163)
 - **Qwen3.5-9B** (same hybrid pattern) — should work, untested
 - Standard Transformers (Llama-3, Mistral, etc.) — should work via the `self_attn.o_proj` + `mlp.down_proj` path, untested
+
+See [badboy/](badboy/) for the risk-classification framework used to score uncensored variants.
 
 Pull requests for additional architectures welcome.
 
