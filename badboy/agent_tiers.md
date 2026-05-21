@@ -35,7 +35,10 @@ Scored with the same 8-dimensional framework as chatbot tiers. AC is consistentl
 | **AT1** | Bulk content generation | T1–T2 amplified | 3 | 1 | 1 | 1 | 0 | 1 | 7 | 1 | 5 | 9 | **2.5** |
 | **AT2** | Personalized one-shot attack | T3a + browser | 1 | 2 | 3 | 3 | 0 | 2 | 11 | 1 | 5 | 9 | **4.0** |
 | **AT3** | Sustained social manipulation | T3b/c + memory | 2 | 4 | 5 | 5 | 0 | 4 | 19 | 1 | 5 | 9 | **6.8** |
+| **AT3r** | Reputation warfare campaign | T3d/T3e + multi-account + memory | 3 | 4 | 4 | 4 | 0 | 4 | 19 | 1 | 5 | 9 | **6.8** ⭐ |
+| **AT3m** | Synthetic-media supply chain | T3e + image/video tools | 3 | 3 | 4 | 4 | 0 | 4 | 18 | 2 | 5 | 8 | **5.8** |
 | **AT4** | Active cyber operation | T4a/b + shell + network | 3 | 3 | 3 | 3 | 1 | 3 | 16 | 2 | 5 | 8 | **5.1** |
+| **AT4r** | Coordinated review / reputation flood | T4e/T4f + parallel agents | 4 | 2 | 3 | 1 | 0 | 3 | 11 | 0 | 5 | 10 | **4.4** |
 | **AT5** | Autonomous campaign (APT-class) | T4b/d + multi-agent | 4 | 4 | 4 | 4 | 2 | 4 | 22 | 2 | 5 | 8 | **7.0** |
 | **AT6** | Mass-scale social/political operation | T7a/b/c + parallel agents | 5 | 3 | 4 | 4 | 1 | 4 | 22 | 1 | 5 | 9 | **7.9** ⭐ |
 
@@ -89,6 +92,34 @@ What changes vs T3b/T3c: agent remembers every prior conversation, builds psycho
 
 Defensive surface: very weak. Counter-messaging is the main mitigation; platform identity verification helps but conflicts with privacy.
 
+### AT3r — Reputation warfare campaign (real risk 6.8) ⭐
+
+T3d (reputation destruction) + T3e (synthetic media fraud) wrapped in multi-account orchestration with persistent memory. Equal-tier to AT3 (intimate manipulation) in real risk — and arguably more *commercially* common.
+
+- Targeted "get this person fired" campaign — multi-source complaint deluge to HR/regulators/customers, sustained over weeks, adapted per response
+- Sustained smear/defamation across platforms with thread coordination
+- Doxxing pipelines that re-publish across mirror sites when one is taken down
+- Deepfake-script production for political/commercial framing
+- Fabricated chat-log series designed to drip-feed a "leak" narrative
+- Brand-reputation attacks on small businesses (引響口碑) for extortion or competitive harm
+
+What changes vs T3d/T3e alone: agent maintains attack momentum past the operator's attention budget. Defender response is met with new accounts, mirror posts, varied phrasings. Career destruction shifts from "needs a motivated mob" to "needs one operator + cloud".
+
+Defensive surface: very weak. Reputation cleanup services exist but are reactive and expensive. Platform de-amplification is the main mitigation but conflicts with free-speech norms.
+
+### AT3m — Synthetic-media supply chain (real risk 5.8)
+
+T3e (synthetic media fraud) where the agent also drives image/video/voice generation tools, producing end-to-end fakes rather than just script.
+
+- Deepfake video for individual extortion (intimate or compromising content)
+- Fabricated "evidence" documents (forged contracts, fake legal notices, fraudulent invoices)
+- Synthetic testimonial videos for product/service fraud
+- Sustained impersonation streams (real-time deepfake calls)
+
+What changes vs T3e alone: T3e provides the *script*; AT3m provides the *deliverable*. Each unit costs cents, each takedown costs the victim hundreds.
+
+Defensive surface: emerging — C2PA provenance, watermarking research. Years from broad deployment.
+
 ### AT4 — Active cyber operation (real risk 5.1)
 
 T4a/T4b plus shell + network. The agent doesn't just write keylogger code — it deploys, monitors, adapts.
@@ -115,6 +146,20 @@ T4b/d combined with multi-agent orchestration over weeks. Behavior similar to na
 What changes vs T4d alone: the agent handles the **whole lifecycle**, including post-attack monetization. Traditional T4d ends when the LLM writes the script; AT5 ends when the proceeds are laundered.
 
 Defensive surface: this is the tier where mainstream cybersecurity industry's "managed detection and response" stops being adequate. Requires sustained sector-level threat intelligence.
+
+### AT4r — Coordinated review / reputation flood (real risk 4.4)
+
+T4e (coordinated harassment) + T4f (commercial review manipulation) at platform scale, run by parallel agents emulating distinct user personas.
+
+- E-commerce review brigades (positive for client product, negative for competitor)
+- App-store rating inflation operations
+- Restaurant/local-business review warfare
+- Hashtag pile-ons / cancel-campaign coordination (暴力網路標籤)
+- Multi-account harassment squads (多帳號網暴) on a single target
+
+What changes vs T4e/T4f alone: each "user" looks individually plausible (distinct writing style, varied platform behavior, organic timing). Detection systems calibrated for bot-like patterns miss agent-driven activity that mimics human variance.
+
+Defensive surface: platform-side identity graphs, posting-pattern analytics. Locked in an arms race; current state slightly favors the attacker.
 
 ### AT6 — Mass-scale social/political operation (real risk 7.9) ⭐
 
